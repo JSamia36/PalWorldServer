@@ -23,7 +23,7 @@ We will be ignoring switching to the steam user and creating the steam folder as
 curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
 ```
 ## PalWorld server install
-If we run a simple 'ls' we will notice steamcmd.sh is now in our folder, typing `steamcmd` should get it to install it and you'll notice instead of user@debian its showing as Steam. This means everything so far has been done correctly. From here we will move on back to the [PalWorld instructions](https://tech.palworldgame.com/getting-started/deploy-dedicated-server/).
+If we run a simple 'ls' we will notice steamcmd.sh is now in our folder, typing `steamcmd` (or `.\steamcmd.sh`) should get it to install it and you'll notice instead of user@debian its showing as Steam. This means everything so far has been done correctly. From here we will move on back to the [PalWorld instructions](https://tech.palworldgame.com/getting-started/deploy-dedicated-server/).
 
 The instructions have you run it all as one command but I prefer to run seperately so for the sake of this that's what we will do, in the Steam terminal paste:
 ```
@@ -49,7 +49,7 @@ sudo apt install playit
 If everything went well, we just have to run it now and get the IP address off of the website in order to connect. You do have to create an account and verify your email if you haven't done so already. In order to run this navigate to /usr/local/bin and here you should see "playit" to run just type `./playit` it then checks if the key is valid and will create the tunnel. Please make sure on the website that you have the IP address set to the LOCAL address, in my case 10.0.0.179:8211. On default PalWorld servers are setup at port 8211 unless you change that.
 
 ## Updating PalWorld server settings
-You must first launch your server before configing, meaning you can launch then shut-down if you desire. In your Palworld server we created in the Getting Started phase, we will navigate to `Pal/Saved/Config/LinuxServer`. In this folder we are just looking for PalWorldSettings.ini, you will notice this is empty so we have to copy the contents of DefaultPalWorldSettings.ini over, you can do so with the command 
+You must first launch your server before configing, meaning you can launch then shut-down if you desire. In your Palworld server we created in the Getting Started phase, we will navigate to `Pal/Saved/Config/LinuxServer`. In this folder we are just looking for PalWorldSettings.ini, you will notice this is empty so we have to copy the contents of DefaultPalWorldSettings.ini over, you can do so with the command (from /Steam/steamapps/common/PalServer)
 ```
 cp DefaultPalWorldSettings.ini /Pal/Saved/Config/LinuxServer
 ```
